@@ -1,8 +1,10 @@
 import React from 'react'
 
-function AddBtn() {
+function AddBtn({ btnText }) {
   return (
-    <div>AddBtn</div>
+    <button className='add-btn'>
+        { btnText}
+    </button>
   )
 }
 

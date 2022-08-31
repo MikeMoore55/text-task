@@ -2,7 +2,10 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <header className='header'>
+        <h1>Text Task</h1>
+        <p className='sub-title'>Track your Tasks the Text Way!</p>
+    </header>
   )
 }
 

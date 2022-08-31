@@ -2,7 +2,7 @@ import React from 'react'
 
 function SortBtn() {
   return (
-    <div>SortBtn</div>
+    <button className='sort-btn'>Sort</button>
   )
 }
 
