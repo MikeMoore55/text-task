@@ -58,3 +58,18 @@
 .sort-btn:active{
   transform: scale(0.9);
 }
+
+.task{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 70% 10% 10%;
+}
+
+.completed{
+  background-color: green;
+}
+
+.reminder{
+  background-color: blue;
+}
