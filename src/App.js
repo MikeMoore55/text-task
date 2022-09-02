@@ -1,6 +1,7 @@
 import react from 'react';
 import './App.css';
 import Header from './components/Header';
+import AddTaskFrom from './components/AddTaskFrom';
 import AddBtn from './components/AddBtn';
 import SortBtn from './components/SortBtn';
 import TaskList from './components/TaskList';
@@ -80,16 +81,31 @@ function App() {
     )
   }
 
+  const addNewTask = async (task) => {
+    const res = await fetch('http://localhost:5000/tasks', {
+      method : 'POST',
+      headers :{
+        'Content-type' : 'application/json'
+      },
+      body : JSON.stringify(task),
+    })
+
+    const data =await res.json()
+
+    setTasks([...tasks, data])
+  }
+
+  const [showTaskModal, setShowTaskModal] = useState(false)
 
   return (
     <div className='App'>
       <Header/>
+      { showTaskModal && <AddTaskFrom addTask={addNewTask}/>}
       <div className='btns-container'>
-        <AddBtn btnText={'Add'}/> 
+        <AddBtn btnText={'Add'} onToggle={ () => setShowTaskModal(!showTaskModal)} showModal={showTaskModal}/> 
         <SortBtn/>
       </div>
-      <TaskList tasks={tasks} deleteTask={deleteTask} toggleReminder={toggleReminder} toggleComplete={toggleComplete}/>
-      
+      {tasks.length >0 ? <TaskList tasks={tasks} deleteTask={deleteTask} toggleReminder={toggleReminder} toggleComplete={toggleComplete}/> : 'No tasks to do!'}
     </div>
   );
 }
