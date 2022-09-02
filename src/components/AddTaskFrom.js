@@ -2,7 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 
 
-function AddTaskFrom({addTask}) {
+function AddTaskFrom({addTask, onToggle}) {
 
   const [name, setNewTask] = useState('')
   const [date, setDate] = useState('')
@@ -12,17 +12,26 @@ function AddTaskFrom({addTask}) {
   const formSubmit = (e) =>{
     e.preventDefault();
     
-    //add task func
+    if (name === '') {
+      alert("Error: Please ensure there is a name for your task")
+    }
+    else if(date === ''){
+      alert("Error: Please ensure you have a date of some sort")
+    }
+    else{
 
     addTask({name, date, completed, reminder})
-
+    
     setNewTask('')
     setDate('')
     setReminder(false)
+    onToggle()
+
+    }
   } 
 
   return (
-    <form onSubmit={formSubmit}>
+    <form onSubmit={formSubmit} className='add-form'>
       <h2>New Task!</h2>
       <div className='form-data'>
         <label className='label'>
@@ -42,9 +51,7 @@ function AddTaskFrom({addTask}) {
         </label>
         <input type='checkbox' className='checkbox' checked={reminder} onChange={(e) => setReminder(e.target.checked)}/>
       </div>
-      <div className='form-data'>
-        <input type='submit' className='save-btn' value='save'/>
-      </div>
+      <input type='submit' className='save-btn' value='save'/>
     </form>
   )
 }

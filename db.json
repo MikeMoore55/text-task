@@ -1,3 +1,11 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "name": "cook dinner",
+      "date": "today 16:30",
+      "completed": false,
+      "reminder": false,
+      "id": 1
+    }
+  ]
 }

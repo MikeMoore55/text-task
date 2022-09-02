@@ -3,23 +3,30 @@
   scroll-behavior: smooth;
 }
 
+body{
+  background-color: rgb(46, 46, 46);
+}
+
 .App{
   position: relative;
-  width: 60%;
-  margin: 0% 20% 0% 20%;
+  width: 100%;
+  margin: 0%;
 }
 
 .header{
   position: relative;
-  width:100%;
-  top: 0%;
-  left: 0%;
+  width: 90%;
+  margin: 1% 5% 1% 5%;
+  background-color: rgb(23, 23, 23);
+  border-radius: 10px;
+  padding: 1%;
 }
 
 .header h1{
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: underline;
+  color: rgb(150, 148, 148);
 }
 
 .header .sub-title{
@@ -27,43 +34,131 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.add-form{
+  position: fixed;
+  top: 32%;
+  left: 15%;
+  width: 70%;
+  z-index: 5;
+  background-color: rgb(23, 23, 23);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0px black;
+}
+
+.add-form h2{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.add-form .form-data{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 30% 70%;
+  margin-top: 3%;
+}
+
+.add-form .form-data .label{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-form .form-data .input{
+  border: solid 1px black;
+  width: 80%;
+}
+
+.add-form .form-data .checkbox{
+  width: 20%;
+}
+
+.add-form .save-btn{
+  width: 30%;
+  left: 40%;
+  margin: 2%;
+  padding: 1%;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
 .btns-container{
   position: relative;
-  width: 100%;
+  width: 90%;
+  margin: 1% 5% 1% 5%;
+  background-color: rgb(23, 23, 23);
+  border-radius: 10px;
   display: flex;
 }
 
 .add-btn{
   position: relative;
   width: 20%;
-  margin-right: 30%;
-  background-color: green;
+  margin: 2% 30% 2% 5%;
+  background-color: rgb(1, 72, 1);
+  color: rgb(163, 163, 163);
+  border-radius: 10px;
   border: none;
-  padding: 2% 2% 2% 2%;
+  padding: 1% 2% 1% 2%;
 }
 
 .add-btn:active{
   transform: scale(0.9);
 }
 
+.cancel-btn{
+  position: relative;
+  width: 20%;
+  margin: 2% 30% 2% 5%;
+  background-color: rgb(92, 2, 2);
+  color: rgb(163, 163, 163);
+  border-radius: 10px;
+  border: none;
+  padding: 1% 2% 1% 2%;
+}
+
+.cancel-btn:active{
+  transform: scale(0.9);
+}
+
 .sort-btn{
   position: relative;
   width: 20%;
-  margin-left: 30%;
-  background-color: lightskyblue;
+  margin: 2% 5% 2% 30%;
+  background-color: rgb(93, 134, 160);
+  color: rgb(163, 163, 163);
+  border-radius: 10px;
   border: none;
-  padding: 2% 2% 2% 2%;
+  padding: 1% 2% 1% 2%;
 }
 
 .sort-btn:active{
   transform: scale(0.9);
 }
 
+.task-list{
+  position: relative;
+  width: 90%;
+  margin: 1% 5% 1% 5%;
+  background-color: rgb(23, 23, 23);
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.task-list h2{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
 .task{
   position: relative;
-  width: 100%;
+  width: 90%;
+  margin: 2% 5% 2% 5%;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 10% 70% 10% 10%;
+  background-color:rgb(46, 46, 46);
 }
 
 .completed{

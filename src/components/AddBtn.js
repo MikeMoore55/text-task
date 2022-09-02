@@ -1,8 +1,8 @@
 import React from 'react'
 
-function AddBtn({ btnText, showModal, onToggle }) {
+function AddBtn({ btnText, onToggle, showModal }) {
   return (
-    <button className='add-btn' onClick={onToggle}>
+    <button className={showModal ? 'cancel-btn' : 'add-btn'} onClick={onToggle}>
         { btnText}
     </button>
   )

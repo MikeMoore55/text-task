@@ -100,9 +100,9 @@ function App() {
   return (
     <div className='App'>
       <Header/>
-      { showTaskModal && <AddTaskFrom addTask={addNewTask}/>}
+      { showTaskModal && <AddTaskFrom addTask={addNewTask} onToggle={ () => setShowTaskModal(!showTaskModal)}/>}
       <div className='btns-container'>
-        <AddBtn btnText={'Add'} onToggle={ () => setShowTaskModal(!showTaskModal)} showModal={showTaskModal}/> 
+        <AddBtn btnText={showTaskModal ? 'cancel' : 'New Task'} onToggle={ () => setShowTaskModal(!showTaskModal)} showModal={showTaskModal}/> 
         <SortBtn/>
       </div>
       {tasks.length >0 ? <TaskList tasks={tasks} deleteTask={deleteTask} toggleReminder={toggleReminder} toggleComplete={toggleComplete}/> : 'No tasks to do!'}
