@@ -26,7 +26,7 @@ body{
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: underline;
-  color: rgb(150, 148, 148);
+  color: rgb(207, 207, 207);
 }
 
 .header .sub-title{
@@ -36,11 +36,11 @@ body{
 
 .add-form{
   position: fixed;
-  top: 32%;
-  left: 15%;
-  width: 70%;
+  top: 27%;
+  left: 25%;
+  width: 50%;
   z-index: 5;
-  background-color: rgb(23, 23, 23);
+  background-color: rgb(40, 40, 40);
   border-radius: 10px;
   box-shadow: 5px 5px 10px 0px black;
 }
@@ -49,6 +49,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   text-decoration: underline;
+  color: rgb(207, 207, 207);
 }
 
 .add-form .form-data{
@@ -60,11 +61,16 @@ body{
 
 .add-form .form-data .label{
   font-family: Arial, Helvetica, sans-serif;
+  color: rgb(207, 207, 207);
+  font-size: 1.2em;
 }
 
 .add-form .form-data .input{
   border: solid 1px black;
   width: 80%;
+  border-radius: 10px;
+  font-size: 1em;
+  padding: 1%;
 }
 
 .add-form .form-data .checkbox{
@@ -72,15 +78,17 @@ body{
 }
 
 .add-form .save-btn{
-  width: 30%;
-  left: 40%;
-  margin: 2%;
+  position: relative;
+  width: 20%;
+  margin: 2% 40%;
   padding: 1%;
   text-transform: capitalize;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: blue;
-  color: white;
+  background-color: rgb(16, 16, 129);
+  color: rgb(207, 207, 207);
   border: none;
+  border-radius: 10px;
+  font-size: 1.1em;
 }
 
 .btns-container{
@@ -97,10 +105,11 @@ body{
   width: 20%;
   margin: 2% 30% 2% 5%;
   background-color: rgb(1, 72, 1);
-  color: rgb(163, 163, 163);
+  color: rgb(207, 207, 207);
   border-radius: 10px;
   border: none;
   padding: 1% 2% 1% 2%;
+  cursor: pointer;
 }
 
 .add-btn:active{
@@ -112,10 +121,11 @@ body{
   width: 20%;
   margin: 2% 30% 2% 5%;
   background-color: rgb(92, 2, 2);
-  color: rgb(163, 163, 163);
+  color: rgb(207, 207, 207);
   border-radius: 10px;
   border: none;
   padding: 1% 2% 1% 2%;
+  cursor: pointer;
 }
 
 .cancel-btn:active{
@@ -127,10 +137,11 @@ body{
   width: 20%;
   margin: 2% 5% 2% 30%;
   background-color: rgb(93, 134, 160);
-  color: rgb(163, 163, 163);
+  color: rgb(207, 207, 207);
   border-radius: 10px;
   border: none;
   padding: 1% 2% 1% 2%;
+  cursor: pointer;
 }
 
 .sort-btn:active{
@@ -148,7 +159,7 @@ body{
 
 .task-list h2{
   font-family: Arial, Helvetica, sans-serif;
-
+  color: rgb(207, 207, 207);
 }
 
 .task{
@@ -159,12 +170,61 @@ body{
   display: grid;
   grid-template-columns: 10% 70% 10% 10%;
   background-color:rgb(46, 46, 46);
+  color: rgb(207, 207, 207);
+}
+
+.task .check-icon{
+  color: rgb(22, 112, 0);
+  margin: 18%;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+.task .check-icon:active{
+  transform: scale(0.9);
+}
+
+.task .del-icon{
+  color: rgb(152, 6, 6);
+  margin: 18%;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+.task .del-icon:active{
+  transform: scale(0.9);
+}
+
+.task .not-icon{
+  color: rgb(4, 30, 118);
+  margin: 18%;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+.task .not-icon:active{
+  transform: scale(0.9);
+}
+
+.task .task-info{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
 }
 
 .completed{
-  background-color: green;
+  text-decoration: line-through;
+  color: black;
+  background-color: rgb(37, 37, 37);
 }
 
 .reminder{
-  background-color: blue;
+  background-color: gray;
+  border: solid rgb(4, 30, 118) 5px;
+  text-transform: uppercase;
+  color: rgb(58, 58, 58);
 }
+

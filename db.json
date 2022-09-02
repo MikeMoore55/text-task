@@ -3,7 +3,7 @@
     {
       "name": "cook dinner",
       "date": "today 16:30",
-      "completed": false,
+      "completed": true,
       "reminder": false,
       "id": 1
     }
